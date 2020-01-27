@@ -1,3 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="180" height="180" viewBox="0 0 180 180">
-  <image id="Left_hover" data-name="Left hover" x="67" y="43" width="45" height="89" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAABZCAYAAACqqa1NAAABuElEQVRogdXbSW7CYBCE0c+5/wHYI+WajiJB5BgP/9BDtRcIWL0FxnZ31fJ4flPsWL+qgX9fKqHX95sq6HX7oQJ63X+hjv4AI44+BCOMPgUjir4EI4i+BSOGbgIjhG4GI4LuAiOA7gaTjB4Ck4geBpOEngKTgJ4GE4w2AROINgMThDYFE4A2B+OMdgHjiHYD44R2BeOAdgdjjA4BY4gOA2OEDgVjgA4HM4lOATOBTgMziE4FM4BOB9OJlgDTgZYB04iWAtOAlgNzg5YEc4GWBXOClgZzgJYHs0OXALNBlwHzQpcC80IvAo6u4/3zKAXfnohl4Pu/vBLwo4uLPPzsMi4Nv7phkoXf3ZpKwlseAuTgrY9bUvCeB1sZeO8IQQI+MqxJh4+OxVLhMwPINPjsqDcFbjFUD4dbrS9C4ZaLojC49UouBO6x/HSHe62ZXeGeC303uHd0wgUeEVIxh0fFgUzhkcErM3h0xM0EnhEmnIZnxTan4JkB2WF4dhR5CK4Q+u6Gq8Tru+BKRYZmuFplpAmuWM65havWoC7hyoWzU7h6te8QXqFE+QGvUlf9B69UDP6DV6tgLwA/ypwvkuDMDpQAAAAASUVORK5CYII="/>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="144pt" height="144pt" viewBox="0 0 144 144"
+  fill-rule="evenodd">
+<g>
+<path style="stroke:none; fill:rgba(0,0,0,0)" d="M 0 0L 0 144L 144 144L 144 0L 0 0z"/>
+<path style="stroke:none; fill:#99a1a7" d="M 88 36L 52 72L 52 72L 88 108L 88 52L 88 36z"/>
+</g>
 </svg>

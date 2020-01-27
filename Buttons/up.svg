@@ -1,3 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="180" height="180" viewBox="0 0 180 180">
-  <image id="Up" x="45" y="65" width="89" height="45" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFkAAAAtCAYAAADFuMd4AAABXElEQVRoge3ZWQ6DMAxF0cD+F8auUqmqq0IZMnh4Tny/EdjnAzEs27YlZ+WU0uJp5BVghpry59jMczqdPCEfYd1Ae0G+AnUB7QH5CRIeGh25FBAaGhm5Fg4WGhW5FQwSGhG5FwoOGg2ZCwgKGgmZGwYGGgVZCgQCGgFZGsIc2hpZC8AU2hJZe3EzaCtkq4VNrmuBbH2PVL++NjLKY5XqHJrIaG9iavNoIaN+vFGZSwMZ/Xuv+HzSyF5+EYnOKYns6men5LxSyN6AKZG5JZC9AlPs83MjewemWPfgRB4FmGLbhwt5NGCKZS8O5FGBqe79epFHB6a69uxBngWYat63FXk2YKpp7xbkWYGp6v1rkWcHpqocapADeF+xRylyAJ9X5FKCHMD3Pfo8IQdwWbdOd8gBXNel1xVyALd16naGHMB9/fkdkQOYp53jL3IA8/b1JOQAluntugawcCnlF855W1qpmIa1AAAAAElFTkSuQmCC"/>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="144pt" height="144pt" viewBox="0 0 144 144"
+  fill-rule="evenodd">
+<g>
+<path style="stroke:none; fill:rgba(0,0,0,0)" d="M 0 0L 0 144L 144 144L 144 0L 0 0z"/>
+<path style="stroke:none; fill:#c7c7c7" d="M 72 52L 36 88L 108 88C 72 88 72 52z"/>
+</g>
 </svg>

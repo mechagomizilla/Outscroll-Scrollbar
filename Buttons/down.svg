@@ -1,3 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="180" height="180" viewBox="0 0 180 180">
-  <image id="Down" x="45" y="65" width="89" height="45" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFkAAAAtCAYAAADFuMd4AAABa0lEQVRoge3ZCY7CMBBE0Z/c/2C5FSPQDGIgi5duu2y6DmB3PYmQ2Mu2bTcirlmBJYhds6y/qwe0Tx6u68vSAW2bp+f6tmxA2+Sf4zsyAV2dD789ZAK6OLtuR8gEdHYOvc6QCejknDpdIRPQl7n0SUEmoA+T5JKKTEB/JNkjB5mAfibLIReZgM7vX4JctNEkKepdiswXQhf3rUGu2niwVPWsReYLoKv7WSAzMbRJLytkJoQ262OJzETQpj2skZkA2nx+D2QGhnaZ2wuZAaHd5vVEZiBo1zm9ke9Rh3afrwUywtBN5mqFjCB0s3laIiME3XSO1sgIQDffvwcyHaG77NsLmQ6Fu/2CeiLTsHjXR1RvZBoAdP+zVUDGEULibUYFGQcQmfdyJWQMYaQ+fNSQMQCS+4RXRKYCSvKMRBWZAjDZ0z5lZDLgpI9T1ZFJAJS/GBgBmRPIIW5eRkFmB3SYO8SRkO/5gx3nkhb4AW1uBAkPoFn6AAAAAElFTkSuQmCC"/>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+  width="144pt" height="144pt" viewBox="0 0 144 144"
+  fill-rule="evenodd">
+<g>
+<path style="stroke:none; fill:rgba(0,0,0,0)" d="M 0 0L 0 144L 144 144L 144 0L 0 0z"/>
+<path style="stroke:none; fill:#c7c7c7" d="M 36 52L 72 88L 72 88L 108 52L 36 52z"/>
+</g>
 </svg>

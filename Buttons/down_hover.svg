@@ -1,3 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="180" height="180" viewBox="0 0 180 180">
-  <image id="Down_hover" data-name="Down hover" x="45" y="65" width="89" height="45" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFkAAAAtCAYAAADFuMd4AAABbklEQVRoge3ZW27DMAxE0WvvfwH9L9BttkjRBm3ihx4kNXI4C5A4B4hjS8vb+8cnGdeswJLErlnWn9UT2iffruufpRPaNnfP9WHZhLbJP8dHZBK6O09+W8gkdHM23faQSejq7HodIZPQxTl0OkMmoU9z6lOCTELvpsilFJmEfkqxRw0yCX1PlUMtMgld378FuWmji6SpdysyLwjd3LcHuWvjydLVsxeZF4Du7meBzIWhTXpZIXNBaLM+lshcCNq0hzUyF4A2n98DmYmhXeb2QmZCaLd5PZGZCNp1Tm/kW9Sh3eeLQEYYOmSuKGQEocPmiURGCDp0jmhkBKDD9x+BzEDoIfuOQmZA4WG/oJHIBBYf+ogajUwAwPA/WwVkHCEk3mZUkHEAkXkvV0LGEEbqw0cNGQMguU94RWQ6oCTPSFSRaQCTPe1TRqYCTvo4VR2ZAkD5i4EZkDmAnOLmZRZkNkCnuUOcCfmWX9h5LmmBL0DkA5JjVyG7AAAAAElFTkSuQmCC"/>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="144pt" height="144pt" viewBox="0 0 144 144"
+  fill-rule="evenodd">
+<g>
+<path style="stroke:none; fill:rgba(0,0,0,0)" d="M 0 0L 0 144L 144 144L 144 0L 0 0z"/>
+<path style="stroke:none; fill:#99a1a7" d="M 36 52L 72 88L 72 88L 108 52L 36 52z"/>
+</g>
 </svg>

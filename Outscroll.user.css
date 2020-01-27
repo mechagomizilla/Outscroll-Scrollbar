@@ -1,0 +1,206 @@
+/* ==UserStyle==
+@name           Outscroll Scrollbar
+@namespace      https://github.com/InsanityDevice/Outscroll-Scrollbar
+@version        1.0.0
+@description    A customizable scrollbar for chromium browsers. It was inspired by the updated web version of Outlook that came out in 2019.
+@author         InsanityDevice
+@license        Apache License 2.0 (https://raw.githubusercontent.com/InsanityDevice/Outscroll-Scrollbar/master/LICENSE)
+@homepageURL    https://github.com/InsanityDevice/Outscroll-Scrollbar
+@supportURL     https://github.com/InsanityDevice/Outscroll-Scrollbar/issues
+@updateURL      https://raw.githubusercontent.com/InsanityDevice/Outscroll-Scrollbar/master/Outscroll.user.css
+@preprocessor uso
+@advanced color bar "Bar" #c8c8c8
+@advanced color hover "On hover" #98a3a6
+@advanced color active "On click" #98a3a6
+@advanced text br "Border radius (up to half of the scrollbar's size)" 9px
+@advanced text border "Bar borders" 6px
+@advanced text borderp "Perpendicular bar borders" 6px
+@advanced text borderb "Button borders" 5px
+@advanced text borderbp "Perpendicular button borders" 5px
+@advanced color bc "Border colour" #212121
+@advanced color bg "Background" #212121
+@advanced color corner "Corner (between the vertical and horizontal bars)" #212121
+@advanced text size "Size" 18px
+@advanced text button "Buttons (0px for none)" 18px
+==/UserStyle== */
+
+@-moz-document regexp(".*") {   
+    html[hide-scrollbar="true"] ::-webkit-scrollbar {
+        display: none;
+    }
+    ::-webkit-scrollbar {
+        width: /*[[size]]*/ !important;
+        height: /*[[size]]*/ !important;
+    }
+    ::-webkit-scrollbar-thumb {
+        -webkit-appearance: none !important;
+        background: /*[[bar]]*/ !important;
+        border-radius: /*[[br]]*/ !important;
+        box-shadow: none !important;
+        width: /*[[size]]*/ !important;
+        height: /*[[size]]*/ !important;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        -webkit-appearance: none !important;
+        background: /*[[hover]]*/ !important;
+    }
+    ::-webkit-scrollbar-thumb:active {
+        -webkit-appearance: none !important;
+        background: /*[[active]]*/ !important;
+    }
+    ::-webkit-scrollbar-thumb:vertical {
+        border-left: /*[[border]]*/ solid /*[[bc]]*/ !important;
+        border-right: /*[[border]]*/ solid /*[[bc]]*/ !important;
+        border-top: /*[[borderp]]*/ solid /*[[bc]]*/ !important;
+        border-bottom: /*[[borderp]]*/ solid /*[[bc]]*/ !important;
+    }
+    ::-webkit-scrollbar-thumb:horizontal {
+        border-top: /*[[border]]*/ solid /*[[bc]]*/ !important;
+        border-bottom: /*[[border]]*/ solid /*[[bc]]*/ !important;
+        border-left: /*[[borderp]]*/ solid /*[[bc]]*/ !important;
+        border-right: /*[[borderp]]*/ solid /*[[bc]]*/ !important;
+    }
+    ::-webkit-scrollbar-track {
+        -webkit-appearance: none !important;
+        background: /*[[bg]]*/ !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        width: /*[[size]]*/ !important;
+        height: /*[[size]]*/ !important;
+    }
+    ::-webkit-scrollbar-track:vertical {
+        -webkit-appearance: none !important;
+        border-left: /*[[border]]*/ solid /*[[bc]]*/ !important;
+        border-right: /*[[border]]*/ solid /*[[bc]]*/ !important;
+        border-top: /*[[borderp]]*/ solid /*[[bc]]*/ !important;
+        border-bottom: /*[[borderp]]*/ solid /*[[bc]]*/ !important;
+    }
+    ::-webkit-scrollbar-track:horizontal {
+        -webkit-appearance: none !important;
+        border-top: /*[[border]]*/ solid /*[[bc]]*/ !important;
+        border-bottom: /*[[border]]*/ solid /*[[bc]]*/ !important;
+        border-left: /*[[borderp]]*/ solid /*[[bc]]*/ !important;
+        border-right: /*[[borderp]]*/ solid /*[[bc]]*/ !important;
+    }
+    ::-webkit-scrollbar-track-piece {
+        -webkit-appearance: none !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        width: /*[[size]]*/ !important;
+        height: /*[[size]]*/ !important;
+    }
+    ::-webkit-scrollbar-corner {
+        -webkit-appearance: none !important;
+        background: /*[[corner]]*/ !important;
+        border: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+    ::-webkit-scrollbar-button {
+        -webkit-appearance: none !important;
+        width: /*[[button]]*/ !important;
+        height: /*[[button]]*/ !important;
+        border-radius: 0 !important;
+    }
+    ::-webkit-scrollbar-button:vertical {
+        border-left: /*[[borderb]]*/ solid /*[[bc]]*/ !important;
+        border-right: /*[[borderb]]*/ solid /*[[bc]]*/ !important;
+        border-top: /*[[borderp]]*/ solid /*[[bc]]*/ !important;
+        border-bottom: /*[[borderp]]*/ solid /*[[bc]]*/ !important;
+    }
+    ::-webkit-scrollbar-button:horizontal {
+        border-top: /*[[borderb]]*/ solid /*[[bc]]*/ !important;
+        border-bottom: /*[[borderb]]*/ solid /*[[bc]]*/ !important;
+        border-left: /*[[borderbp]]*/ solid /*[[bc]]*/ !important;
+        border-right: /*[[borderbp]]*/ solid /*[[bc]]*/ !important;
+    }
+    ::-webkit-scrollbar-button:increment:start {
+        width: 0 !important;
+        height: 0 !important;
+    }
+    ::-webkit-scrollbar-button:decrement:end {
+        width: 0 !important;
+        height: 0 !important;
+    }
+    ::-webkit-scrollbar-button:vertical:decrement {
+        -webkit-appearance: none !important;
+        background-position: center !important;
+        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiCiAgd2lkdGg9IjE0NHB0IiBoZWlnaHQ9IjE0NHB0IiB2aWV3Qm94PSIwIDAgMTQ0IDE0NCIKICBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgo8Zz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOnJnYmEoMCwwLDAsMCkiIGQ9Ik0gMCAwTCAwIDE0NEwgMTQ0IDE0NEwgMTQ0IDBMIDAgMHoiLz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOiNjN2M3YzciIGQ9Ik0gNzIgNTJMIDM2IDg4TCAxMDggODhDIDcyIDg4IDcyIDUyeiIvPgo8L2c+Cjwvc3ZnPg==') !important;
+        background-size: /*[[button]]*/ !important;
+        background-color: /*[[bg]]*/ !important;
+    }
+    ::-webkit-scrollbar-button:vertical:increment {
+        -webkit-appearance: none !important;
+        background-position: center !important;
+        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIAogIHdpZHRoPSIxNDRwdCIgaGVpZ2h0PSIxNDRwdCIgdmlld0JveD0iMCAwIDE0NCAxNDQiCiAgZmlsbC1ydWxlPSJldmVub2RkIj4KPGc+CjxwYXRoIHN0eWxlPSJzdHJva2U6bm9uZTsgZmlsbDpyZ2JhKDAsMCwwLDApIiBkPSJNIDAgMEwgMCAxNDRMIDE0NCAxNDRMIDE0NCAwTCAwIDB6Ii8+CjxwYXRoIHN0eWxlPSJzdHJva2U6bm9uZTsgZmlsbDojYzdjN2M3IiBkPSJNIDM2IDUyTCA3MiA4OEwgNzIgODhMIDEwOCA1MkwgMzYgNTJ6Ii8+CjwvZz4KPC9zdmc+') !important;
+        background-size: /*[[button]]*/ !important;
+        background-color: /*[[bg]]*/ !important;
+    }
+    ::-webkit-scrollbar-button:horizontal:decrement {
+        -webkit-appearance: none !important;
+        background-position: center !important;
+        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiCiAgd2lkdGg9IjE0NHB0IiBoZWlnaHQ9IjE0NHB0IiB2aWV3Qm94PSIwIDAgMTQ0IDE0NCIKICBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgo8Zz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOnJnYmEoMCwwLDAsMCkiIGQ9Ik0gMCAwTCAwIDE0NEwgMTQ0IDE0NEwgMTQ0IDBMIDAgMHoiLz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOiNjN2M3YzciIGQ9Ik0gODggMzZMIDUyIDcyTCA1MiA3MkwgODggMTA4TCA4OCA1MkwgODggMzZ6Ii8+CjwvZz4KPC9zdmc+') !important;
+        background-size: /*[[button]]*/ !important;
+        background-color: /*[[bg]]*/ !important;
+    }
+    ::-webkit-scrollbar-button:horizontal:increment {
+        -webkit-appearance: none !important;
+        background-position: center !important;
+        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiCiAgd2lkdGg9IjE0NHB0IiBoZWlnaHQ9IjE0NHB0IiB2aWV3Qm94PSIwIDAgMTQ0IDE0NCIKICBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgo8Zz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOnJnYmEoMCwwLDAsMCkiIGQ9Ik0gMCAwTCAwIDE0NEwgMTQ0IDE0NEwgMTQ0IDBMIDAgMHoiLz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOiNjN2M3YzciIGQ9Ik0gNTIgMzZMIDUyIDEwOEwgODggNzJMIDg4IDcyTCA1MiAzNnoiLz4KPC9nPgo8L3N2Zz4=') !important;
+        background-size: /*[[button]]*/ !important;
+        background-color: /*[[bg]]*/ !important;
+    }
+    ::-webkit-scrollbar-button:vertical:decrement:hover {
+        -webkit-appearance: none !important;
+        background-position: center !important;
+        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiCiAgd2lkdGg9IjE0NHB0IiBoZWlnaHQ9IjE0NHB0IiB2aWV3Qm94PSIwIDAgMTQ0IDE0NCIKICBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgo8Zz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOnJnYmEoMCwwLDAsMCkiIGQ9Ik0gMCAwTCAwIDE0NEwgMTQ0IDE0NEwgMTQ0IDBMIDAgMHoiLz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOiM5OWExYTciIGQ9Ik0gNzIgNTJMIDM2IDg4TCAxMDggODhDIDcyIDg4IDcyIDUyeiIvPgo8L2c+Cjwvc3ZnPg==') !important;
+        background-size: /*[[button]]*/ !important;
+        background-color: /*[[bg]]*/ !important;
+    }
+    ::-webkit-scrollbar-button:vertical:increment:hover {
+        -webkit-appearance: none !important;
+        background-position: center !important;
+        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiCiAgd2lkdGg9IjE0NHB0IiBoZWlnaHQ9IjE0NHB0IiB2aWV3Qm94PSIwIDAgMTQ0IDE0NCIKICBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgo8Zz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOnJnYmEoMCwwLDAsMCkiIGQ9Ik0gMCAwTCAwIDE0NEwgMTQ0IDE0NEwgMTQ0IDBMIDAgMHoiLz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOiM5OWExYTciIGQ9Ik0gMzYgNTJMIDcyIDg4TCA3MiA4OEwgMTA4IDUyTCAzNiA1MnoiLz4KPC9nPgo8L3N2Zz4=') !important;
+        background-size: /*[[button]]*/ !important;
+        background-color: /*[[bg]]*/ !important;
+    }
+    ::-webkit-scrollbar-button:horizontal:decrement:hover {
+        -webkit-appearance: none !important;
+        background-position: center !important;
+        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiCiAgd2lkdGg9IjE0NHB0IiBoZWlnaHQ9IjE0NHB0IiB2aWV3Qm94PSIwIDAgMTQ0IDE0NCIKICBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgo8Zz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOnJnYmEoMCwwLDAsMCkiIGQ9Ik0gMCAwTCAwIDE0NEwgMTQ0IDE0NEwgMTQ0IDBMIDAgMHoiLz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOiM5OWExYTciIGQ9Ik0gODggMzZMIDUyIDcyTCA1MiA3MkwgODggMTA4TCA4OCA1MkwgODggMzZ6Ii8+CjwvZz4KPC9zdmc+') !important;
+        background-size: /*[[button]]*/ !important;
+        background-color: /*[[bg]]*/ !important;
+    }
+    ::-webkit-scrollbar-button:horizontal:increment:hover {
+        -webkit-appearance: none !important;
+        background-position: center !important;
+        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiCiAgd2lkdGg9IjE0NHB0IiBoZWlnaHQ9IjE0NHB0IiB2aWV3Qm94PSIwIDAgMTQ0IDE0NCIKICBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgo8Zz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOnJnYmEoMCwwLDAsMCkiIGQ9Ik0gMCAwTCAwIDE0NEwgMTQ0IDE0NEwgMTQ0IDBMIDAgMHoiLz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOiM5OWExYTciIGQ9Ik0gNTIgMzZMIDUyIDEwOEwgODggNzJMIDg4IDcyTCA1MiAzNnoiLz4KPC9nPgo8L3N2Zz4=') !important;
+        background-size: /*[[button]]*/ !important;
+        background-color: /*[[bg]]*/ !important;
+    }
+    ::-webkit-scrollbar-button:vertical:decrement:active {
+        -webkit-appearance: none !important;
+        background-position: center !important;
+        background-size: /*[[button]]*/ !important;
+        background-color: /*[[bg]]*/ !important;
+    }
+    ::-webkit-scrollbar-button:vertical:increment:active {
+        -webkit-appearance: none !important;
+        background-position: center !important;
+        background-size: /*[[button]]*/ !important;
+        background-color: /*[[bg]]*/ !important;
+    }
+    ::-webkit-scrollbar-button:horizontal:decrement:active {
+        -webkit-appearance: none !important;
+        background-position: center !important;
+        background-size: /*[[button]]*/ !important;
+        background-color: /*[[bg]]*/ !important;
+    }
+    ::-webkit-scrollbar-button:horizontal:increment:active {
+        -webkit-appearance: none !important;
+        background-position: center !important;
+        background-size: /*[[button]]*/ !important;
+        background-color: /*[[bg]]*/ !important;
+    }
+}

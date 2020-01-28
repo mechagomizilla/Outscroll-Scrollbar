@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Outscroll Scrollbar
 @namespace      https://github.com/InsanityDevice/Outscroll-Scrollbar
-@version        1.0.0
+@version        1.1.0
 @description    A customizable scrollbar for chromium browsers. It was inspired by the updated web version of Outlook that came out in 2019.
 @author         InsanityDevice
 @license        Apache License 2.0 (https://raw.githubusercontent.com/InsanityDevice/Outscroll-Scrollbar/master/LICENSE)
@@ -9,19 +9,28 @@
 @supportURL     https://github.com/InsanityDevice/Outscroll-Scrollbar/issues
 @updateURL      https://raw.githubusercontent.com/InsanityDevice/Outscroll-Scrollbar/master/Outscroll.user.css
 @preprocessor uso
-@advanced color bar "Bar" #c8c8c8
-@advanced color hover "On hover" #98a3a6
-@advanced color active "On click" #98a3a6
-@advanced text br "Border radius (up to half of the scrollbar's size)" 9px
-@advanced text border "Bar borders" 6px
-@advanced text borderp "Perpendicular bar borders" 6px
-@advanced text borderb "Button borders" 5px
-@advanced text borderbp "Perpendicular button borders" 5px
-@advanced color bc "Border colour" #212121
-@advanced color bg "Background" #212121
-@advanced color corner "Corner (between the vertical and horizontal bars)" #212121
 @advanced text size "Size" 18px
 @advanced text button "Buttons (0px for none)" 18px
+@advanced text br "Bar radius" 9px
+@advanced color bar "Bar colour" #c8c8c8
+@advanced color hover "On hover" #98a3a6
+@advanced color active "On click" #98a3a6
+@advanced color bg "Background" #212121
+@advanced color arrow "Arrow colour" #c8c8c8
+@advanced color arrowh "Arrow on hover" #98a3a6
+@advanced color arrowa "Arrow on click" #98a3a6
+@advanced color btc "Button colour" #212121
+@advanced color btch "Button on hover" #212121
+@advanced color btca "Button on click" #212121
+@advanced text border "Bar borders" 6px
+@advanced text borderp "Perpendicular bar borders" 6px
+@advanced text borderbg "Background borders" 0px
+@advanced text borderbgp "Perpendicular background borders" 0px
+@advanced text borderb "Button borders" 0px
+@advanced text borderbp "Perpendicular button borders" 0px
+@advanced color bc "Bar border colour" #212121
+@advanced color bgbc "Background border colour" #212121
+@advanced color bbc "Button border colour" #212121
 ==/UserStyle== */
 
 @-moz-document regexp(".*") {   
@@ -70,17 +79,17 @@
     }
     ::-webkit-scrollbar-track:vertical {
         -webkit-appearance: none !important;
-        border-left: /*[[border]]*/ solid /*[[bc]]*/ !important;
-        border-right: /*[[border]]*/ solid /*[[bc]]*/ !important;
-        border-top: /*[[borderp]]*/ solid /*[[bc]]*/ !important;
-        border-bottom: /*[[borderp]]*/ solid /*[[bc]]*/ !important;
+        border-left: /*[[borderbg]]*/ solid /*[[bgbc]]*/ !important;
+        border-right: /*[[borderbg]]*/ solid /*[[bgbc]]*/ !important;
+        border-top: /*[[borderbgp]]*/ solid /*[[bgbc]]*/ !important;
+        border-bottom: /*[[borderbgp]]*/ solid /*[[bgbc]]*/ !important;
     }
     ::-webkit-scrollbar-track:horizontal {
         -webkit-appearance: none !important;
-        border-top: /*[[border]]*/ solid /*[[bc]]*/ !important;
-        border-bottom: /*[[border]]*/ solid /*[[bc]]*/ !important;
-        border-left: /*[[borderp]]*/ solid /*[[bc]]*/ !important;
-        border-right: /*[[borderp]]*/ solid /*[[bc]]*/ !important;
+        border-top: /*[[borderbg]]*/ solid /*[[bgbc]]*/ !important;
+        border-bottom: /*[[borderbg]]*/ solid /*[[bgbc]]*/ !important;
+        border-left: /*[[borderbgp]]*/ solid /*[[bgbc]]*/ !important;
+        border-right: /*[[borderbgp]]*/ solid /*[[bgbc]]*/ !important;
     }
     ::-webkit-scrollbar-track-piece {
         -webkit-appearance: none !important;
@@ -92,8 +101,8 @@
     }
     ::-webkit-scrollbar-corner {
         -webkit-appearance: none !important;
-        background: /*[[corner]]*/ !important;
-        border: none !important;
+        background: /*[[bg]]*/ !important;
+        border: /*[[borderbg]]*/ solid /*[[bgbc]]*/ !important;
         border-radius: 0 !important;
         box-shadow: none !important;
     }
@@ -104,16 +113,16 @@
         border-radius: 0 !important;
     }
     ::-webkit-scrollbar-button:vertical {
-        border-left: /*[[borderb]]*/ solid /*[[bc]]*/ !important;
-        border-right: /*[[borderb]]*/ solid /*[[bc]]*/ !important;
-        border-top: /*[[borderp]]*/ solid /*[[bc]]*/ !important;
-        border-bottom: /*[[borderp]]*/ solid /*[[bc]]*/ !important;
+        border-left: /*[[borderb]]*/ solid /*[[bbc]]*/ !important;
+        border-right: /*[[borderb]]*/ solid /*[[bbc]]*/ !important;
+        border-top: /*[[borderbp]]*/ solid /*[[bbc]]*/ !important;
+        border-bottom: /*[[borderbp]]*/ solid /*[[bbc]]*/ !important;
     }
     ::-webkit-scrollbar-button:horizontal {
-        border-top: /*[[borderb]]*/ solid /*[[bc]]*/ !important;
-        border-bottom: /*[[borderb]]*/ solid /*[[bc]]*/ !important;
-        border-left: /*[[borderbp]]*/ solid /*[[bc]]*/ !important;
-        border-right: /*[[borderbp]]*/ solid /*[[bc]]*/ !important;
+        border-top: /*[[borderb]]*/ solid /*[[bbc]]*/ !important;
+        border-bottom: /*[[borderb]]*/ solid /*[[bbc]]*/ !important;
+        border-left: /*[[borderbp]]*/ solid /*[[bbc]]*/ !important;
+        border-right: /*[[borderbp]]*/ solid /*[[bbc]]*/ !important;
     }
     ::-webkit-scrollbar-button:increment:start {
         width: 0 !important;
@@ -126,81 +135,85 @@
     ::-webkit-scrollbar-button:vertical:decrement {
         -webkit-appearance: none !important;
         background-position: center !important;
-        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiCiAgd2lkdGg9IjE0NHB0IiBoZWlnaHQ9IjE0NHB0IiB2aWV3Qm94PSIwIDAgMTQ0IDE0NCIKICBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgo8Zz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOnJnYmEoMCwwLDAsMCkiIGQ9Ik0gMCAwTCAwIDE0NEwgMTQ0IDE0NEwgMTQ0IDBMIDAgMHoiLz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOiNjN2M3YzciIGQ9Ik0gNzIgNTJMIDM2IDg4TCAxMDggODhDIDcyIDg4IDcyIDUyeiIvPgo8L2c+Cjwvc3ZnPg==') !important;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="144pt" height="144pt" viewBox="0 0 144 144" fill-rule="evenodd"><g><path style="stroke:none; fill:rgba(0,0,0,0)" d="M 0 0L 0 144L 144 144L 144 0L 0 0z"/><path style="stroke:none; fill:/*[[arrow]]*/" d="M 72 52L 36 88L 108 88C 72 88 72 52z"/></g></svg>') !important;
         background-size: /*[[button]]*/ !important;
-        background-color: /*[[bg]]*/ !important;
+        background-color: /*[[btc]]*/ !important;
     }
     ::-webkit-scrollbar-button:vertical:increment {
         -webkit-appearance: none !important;
         background-position: center !important;
-        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIAogIHdpZHRoPSIxNDRwdCIgaGVpZ2h0PSIxNDRwdCIgdmlld0JveD0iMCAwIDE0NCAxNDQiCiAgZmlsbC1ydWxlPSJldmVub2RkIj4KPGc+CjxwYXRoIHN0eWxlPSJzdHJva2U6bm9uZTsgZmlsbDpyZ2JhKDAsMCwwLDApIiBkPSJNIDAgMEwgMCAxNDRMIDE0NCAxNDRMIDE0NCAwTCAwIDB6Ii8+CjxwYXRoIHN0eWxlPSJzdHJva2U6bm9uZTsgZmlsbDojYzdjN2M3IiBkPSJNIDM2IDUyTCA3MiA4OEwgNzIgODhMIDEwOCA1MkwgMzYgNTJ6Ii8+CjwvZz4KPC9zdmc+') !important;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="144pt" height="144pt" viewBox="0 0 144 144" fill-rule="evenodd"><g><path style="stroke:none; fill:rgba(0,0,0,0)" d="M 0 0L 0 144L 144 144L 144 0L 0 0z"/><path style="stroke:none; fill:/*[[arrow]]*/" d="M 36 52L 72 88L 72 88L 108 52L 36 52z"/></g></svg>') !important;
         background-size: /*[[button]]*/ !important;
-        background-color: /*[[bg]]*/ !important;
+        background-color: /*[[btc]]*/ !important;
     }
     ::-webkit-scrollbar-button:horizontal:decrement {
         -webkit-appearance: none !important;
         background-position: center !important;
-        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiCiAgd2lkdGg9IjE0NHB0IiBoZWlnaHQ9IjE0NHB0IiB2aWV3Qm94PSIwIDAgMTQ0IDE0NCIKICBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgo8Zz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOnJnYmEoMCwwLDAsMCkiIGQ9Ik0gMCAwTCAwIDE0NEwgMTQ0IDE0NEwgMTQ0IDBMIDAgMHoiLz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOiNjN2M3YzciIGQ9Ik0gODggMzZMIDUyIDcyTCA1MiA3MkwgODggMTA4TCA4OCA1MkwgODggMzZ6Ii8+CjwvZz4KPC9zdmc+') !important;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="144pt" height="144pt" viewBox="0 0 144 144" fill-rule="evenodd"><g><path style="stroke:none; fill:rgba(0,0,0,0)" d="M 0 0L 0 144L 144 144L 144 0L 0 0z"/><path style="stroke:none; fill:/*[[arrow]]*/" d="M 88 36L 52 72L 52 72L 88 108L 88 52L 88 36z"/></g></svg>') !important;
         background-size: /*[[button]]*/ !important;
-        background-color: /*[[bg]]*/ !important;
+        background-color: /*[[btc]]*/ !important;
     }
     ::-webkit-scrollbar-button:horizontal:increment {
         -webkit-appearance: none !important;
         background-position: center !important;
-        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiCiAgd2lkdGg9IjE0NHB0IiBoZWlnaHQ9IjE0NHB0IiB2aWV3Qm94PSIwIDAgMTQ0IDE0NCIKICBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgo8Zz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOnJnYmEoMCwwLDAsMCkiIGQ9Ik0gMCAwTCAwIDE0NEwgMTQ0IDE0NEwgMTQ0IDBMIDAgMHoiLz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOiNjN2M3YzciIGQ9Ik0gNTIgMzZMIDUyIDEwOEwgODggNzJMIDg4IDcyTCA1MiAzNnoiLz4KPC9nPgo8L3N2Zz4=') !important;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="144pt" height="144pt" viewBox="0 0 144 144" fill-rule="evenodd"><g><path style="stroke:none; fill:rgba(0,0,0,0)" d="M 0 0L 0 144L 144 144L 144 0L 0 0z"/><path style="stroke:none; fill:/*[[arrow]]*/" d="M 52 36L 52 108L 88 72L 88 72L 52 36z"/></g></svg>') !important;
         background-size: /*[[button]]*/ !important;
-        background-color: /*[[bg]]*/ !important;
+        background-color: /*[[btc]]*/ !important;
     }
     ::-webkit-scrollbar-button:vertical:decrement:hover {
         -webkit-appearance: none !important;
         background-position: center !important;
-        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiCiAgd2lkdGg9IjE0NHB0IiBoZWlnaHQ9IjE0NHB0IiB2aWV3Qm94PSIwIDAgMTQ0IDE0NCIKICBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgo8Zz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOnJnYmEoMCwwLDAsMCkiIGQ9Ik0gMCAwTCAwIDE0NEwgMTQ0IDE0NEwgMTQ0IDBMIDAgMHoiLz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOiM5OWExYTciIGQ9Ik0gNzIgNTJMIDM2IDg4TCAxMDggODhDIDcyIDg4IDcyIDUyeiIvPgo8L2c+Cjwvc3ZnPg==') !important;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="144pt" height="144pt" viewBox="0 0 144 144" fill-rule="evenodd"><g><path style="stroke:none; fill:rgba(0,0,0,0)" d="M 0 0L 0 144L 144 144L 144 0L 0 0z"/><path style="stroke:none; fill:/*[[arrowh]]*/" d="M 72 52L 36 88L 108 88C 72 88 72 52z"/></g></svg>') !important;
         background-size: /*[[button]]*/ !important;
-        background-color: /*[[bg]]*/ !important;
+        background-color: /*[[btch]]*/ !important;
     }
     ::-webkit-scrollbar-button:vertical:increment:hover {
         -webkit-appearance: none !important;
         background-position: center !important;
-        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiCiAgd2lkdGg9IjE0NHB0IiBoZWlnaHQ9IjE0NHB0IiB2aWV3Qm94PSIwIDAgMTQ0IDE0NCIKICBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgo8Zz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOnJnYmEoMCwwLDAsMCkiIGQ9Ik0gMCAwTCAwIDE0NEwgMTQ0IDE0NEwgMTQ0IDBMIDAgMHoiLz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOiM5OWExYTciIGQ9Ik0gMzYgNTJMIDcyIDg4TCA3MiA4OEwgMTA4IDUyTCAzNiA1MnoiLz4KPC9nPgo8L3N2Zz4=') !important;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="144pt" height="144pt" viewBox="0 0 144 144" fill-rule="evenodd"><g><path style="stroke:none; fill:rgba(0,0,0,0)" d="M 0 0L 0 144L 144 144L 144 0L 0 0z"/><path style="stroke:none; fill:/*[[arrowh]]*/" d="M 36 52L 72 88L 72 88L 108 52L 36 52z"/></g></svg>') !important;
         background-size: /*[[button]]*/ !important;
-        background-color: /*[[bg]]*/ !important;
+        background-color: /*[[btch]]*/ !important;
     }
     ::-webkit-scrollbar-button:horizontal:decrement:hover {
         -webkit-appearance: none !important;
         background-position: center !important;
-        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiCiAgd2lkdGg9IjE0NHB0IiBoZWlnaHQ9IjE0NHB0IiB2aWV3Qm94PSIwIDAgMTQ0IDE0NCIKICBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgo8Zz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOnJnYmEoMCwwLDAsMCkiIGQ9Ik0gMCAwTCAwIDE0NEwgMTQ0IDE0NEwgMTQ0IDBMIDAgMHoiLz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOiM5OWExYTciIGQ9Ik0gODggMzZMIDUyIDcyTCA1MiA3MkwgODggMTA4TCA4OCA1MkwgODggMzZ6Ii8+CjwvZz4KPC9zdmc+') !important;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="144pt" height="144pt" viewBox="0 0 144 144" fill-rule="evenodd"><g><path style="stroke:none; fill:rgba(0,0,0,0)" d="M 0 0L 0 144L 144 144L 144 0L 0 0z"/><path style="stroke:none; fill:/*[[arrowh]]*/" d="M 88 36L 52 72L 52 72L 88 108L 88 52L 88 36z"/></g></svg>') !important;
         background-size: /*[[button]]*/ !important;
-        background-color: /*[[bg]]*/ !important;
+        background-color: /*[[btch]]*/ !important;
     }
     ::-webkit-scrollbar-button:horizontal:increment:hover {
         -webkit-appearance: none !important;
         background-position: center !important;
-        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiCiAgd2lkdGg9IjE0NHB0IiBoZWlnaHQ9IjE0NHB0IiB2aWV3Qm94PSIwIDAgMTQ0IDE0NCIKICBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgo8Zz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOnJnYmEoMCwwLDAsMCkiIGQ9Ik0gMCAwTCAwIDE0NEwgMTQ0IDE0NEwgMTQ0IDBMIDAgMHoiLz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOiM5OWExYTciIGQ9Ik0gNTIgMzZMIDUyIDEwOEwgODggNzJMIDg4IDcyTCA1MiAzNnoiLz4KPC9nPgo8L3N2Zz4=') !important;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="144pt" height="144pt" viewBox="0 0 144 144" fill-rule="evenodd"><g><path style="stroke:none; fill:rgba(0,0,0,0)" d="M 0 0L 0 144L 144 144L 144 0L 0 0z"/><path style="stroke:none; fill:/*[[arrowh]]*/" d="M 52 36L 52 108L 88 72L 88 72L 52 36z"/></g></svg>') !important;
         background-size: /*[[button]]*/ !important;
-        background-color: /*[[bg]]*/ !important;
+        background-color: /*[[btch]]*/ !important;
     }
     ::-webkit-scrollbar-button:vertical:decrement:active {
         -webkit-appearance: none !important;
         background-position: center !important;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="144pt" height="144pt" viewBox="0 0 144 144" fill-rule="evenodd"><g><path style="stroke:none; fill:rgba(0,0,0,0)" d="M 0 0L 0 144L 144 144L 144 0L 0 0z"/><path style="stroke:none; fill:/*[[arrowa]]*/" d="M 72 52L 36 88L 108 88C 72 88 72 52z"/></g></svg>') !important;
         background-size: /*[[button]]*/ !important;
-        background-color: /*[[bg]]*/ !important;
+        background-color: /*[[btca]]*/ !important;
     }
     ::-webkit-scrollbar-button:vertical:increment:active {
         -webkit-appearance: none !important;
         background-position: center !important;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="144pt" height="144pt" viewBox="0 0 144 144" fill-rule="evenodd"><g><path style="stroke:none; fill:rgba(0,0,0,0)" d="M 0 0L 0 144L 144 144L 144 0L 0 0z"/><path style="stroke:none; fill:/*[[arrowa]]*/" d="M 36 52L 72 88L 72 88L 108 52L 36 52z"/></g></svg>') !important;
         background-size: /*[[button]]*/ !important;
-        background-color: /*[[bg]]*/ !important;
+        background-color: /*[[btca]]*/ !important;
     }
     ::-webkit-scrollbar-button:horizontal:decrement:active {
         -webkit-appearance: none !important;
         background-position: center !important;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="144pt" height="144pt" viewBox="0 0 144 144" fill-rule="evenodd"><g><path style="stroke:none; fill:rgba(0,0,0,0)" d="M 0 0L 0 144L 144 144L 144 0L 0 0z"/><path style="stroke:none; fill:/*[[arrowa]]*/" d="M 88 36L 52 72L 52 72L 88 108L 88 52L 88 36z"/></g></svg>') !important;
         background-size: /*[[button]]*/ !important;
-        background-color: /*[[bg]]*/ !important;
+        background-color: /*[[btca]]*/ !important;
     }
     ::-webkit-scrollbar-button:horizontal:increment:active {
         -webkit-appearance: none !important;
         background-position: center !important;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="144pt" height="144pt" viewBox="0 0 144 144" fill-rule="evenodd"><g><path style="stroke:none; fill:rgba(0,0,0,0)" d="M 0 0L 0 144L 144 144L 144 0L 0 0z"/><path style="stroke:none; fill:/*[[arrowa]]*/" d="M 52 36L 52 108L 88 72L 88 72L 52 36z"/></g></svg>') !important;
         background-size: /*[[button]]*/ !important;
-        background-color: /*[[bg]]*/ !important;
+        background-color: /*[[btca]]*/ !important;
     }
 }

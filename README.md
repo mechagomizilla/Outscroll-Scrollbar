@@ -3,7 +3,7 @@ A customizable scrollbar for chromium browsers. It was inspired by the updated w
 
 ![scrollbar_promo](https://raw.githubusercontent.com/InsanityDevice/Outscroll-Scrollbar/master/scrollbar_promo.png)
 
-This scrollbar is available either [here](https://raw.githubusercontent.com/InsanityDevice/Dark-10-theme-for-Google-Chrome/master/Dark-10-Scrollbar.user.css) or on [UserStyles](https://userstyles.org/styles/179601/outscroll-scrollbar). You can install it using the [Stylus](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) app, available on the Chrome Web Store.
+This scrollbar is available either [here](https://raw.githubusercontent.com/InsanityDevice/Outscroll-Scrollbar/master/Outscroll.user.css) or on [UserStyles](https://userstyles.org/styles/179601/outscroll-scrollbar). You can install it using the [Stylus](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) app, available on the Chrome Web Store.
 
 ### Limitations
 Works with CHROME, OPERA, BRAVE and the new EDGE (any chromium-based browser that allows a userstyles or usercss extension).

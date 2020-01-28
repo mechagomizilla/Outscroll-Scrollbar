@@ -12,3 +12,6 @@ Be aware that the scrollbar will sometimes show if the HTML code asks for it, re
 
 DOESN'T WORK WITH FIREFOX!
 And there's nothing I can do about that. Look elsewhere. Github and the FirefoxCSS Reddit are good places to start. Or you could also check out my own Firefox CSS repo while you're here (it's not very tidy, though).
+
+### Known issues
+If you don't see the arrows, either switch to [Stylus](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) or use the [UserStyles](https://userstyles.org/styles/179601/outscroll-scrollbar) version.

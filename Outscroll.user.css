@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Outscroll Scrollbar
 @namespace      https://github.com/InsanityDevice/Outscroll-Scrollbar
-@version        1.2.0
+@version        1.2.1
 @description    A customizable scrollbar for chromium browsers. It was inspired by the updated web version of Outlook that came out in 2019.
 @author         InsanityDevice
 @license        Apache License 2.0 (https://raw.githubusercontent.com/InsanityDevice/Outscroll-Scrollbar/master/LICENSE)
@@ -93,7 +93,7 @@
     }
     ::-webkit-scrollbar-track-piece {
         -webkit-appearance: none !important;
-        background: transparent !important;
+        background: /*[[bg]]*/ !important;
         border: none !important;
         box-shadow: none !important;
         width: /*[[size]]*/ !important;
